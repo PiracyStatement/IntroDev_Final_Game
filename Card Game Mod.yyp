@@ -8,6 +8,7 @@
     {"id":{"name":"obj_selection_arrow","path":"objects/obj_selection_arrow/obj_selection_arrow.yy",},"order":8,},
     {"id":{"name":"snd_player_damaged","path":"sounds/snd_player_damaged/snd_player_damaged.yy",},"order":4,},
     {"id":{"name":"fnt_gui_default","path":"fonts/fnt_gui_default/fnt_gui_default.yy",},"order":1,},
+    {"id":{"name":"scr_region_init","path":"scripts/scr_region_init/scr_region_init.yy",},"order":1,},
     {"id":{"name":"obj_game_manager","path":"objects/obj_game_manager/obj_game_manager.yy",},"order":9,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_enemy_manager","path":"objects/obj_enemy_manager/obj_enemy_manager.yy",},"order":2,},
