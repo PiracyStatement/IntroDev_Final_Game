@@ -10,7 +10,7 @@ function cast()
 		
 			if _health_diff > 0
 			{
-				target.take_damage(damage_current + _health_diff);
+				target.take_damage(other.momentum_cost * _health_diff);
 				momentum -= other.momentum_cost;
 			}
 		}

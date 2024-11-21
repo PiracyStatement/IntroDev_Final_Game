@@ -8,9 +8,21 @@ enemy_zone_y = room_height / 2;
 
 enemy_spawn_timer = 0;
 
-enemies_kill_goal = 5;
+enemies_kill_goal = global.regions[global.current_region].enemy_count;
 enemies_spawned = 0;
 enemies_killed = 0;
+
+receiver = new Receiver();
+
+receiver.add(SIGNAL.ENEMY_DIED, function()
+{
+	on_enemy_death();
+});
+receiver.add(SIGNAL.ZONE_CHANGED, function()
+{
+	enemies_spawned = 0;
+	enemies_kill_goal = global.regions[global.current_region].enemy_count;
+});
 
 
 
@@ -32,11 +44,11 @@ function sort_enemy_placements()
 	}
 }
 
-function spawn_enemy(_pos)
+function spawn_enemy(_enemy, _pos = ds_list_size(global.enemies)) //by default, spawn enemy at the end of the enemy list
 {
-	var _new_enemy = instance_create_layer(room_width + sprite_width, enemy_zone_y, "Instances", obj_enemy,
+	var _new_enemy = instance_create_layer(room_width + sprite_width, enemy_zone_y, "Enemies", _enemy,
 	{
-		health_base : irandom_range(10, 30)
+		//health_base : irandom_range(10, 30)
 	});
 	
 	_new_enemy.set_list_position(_pos);

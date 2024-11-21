@@ -5,32 +5,18 @@ capture = false;
 game_won = false;
 game_lost = false;
 
-scr_region_init();
+zone_name = global.regions[global.current_region].r_zone;
+region_name = global.regions[global.current_region].r_name;
 
-regions = 
-[
-	region_londell_narrow_valley,
-	region_londell_foothill_forests,
-	region_londell_londell_vale,
-	
-	region_deepwood_the_strands,
-	region_deepwood_tower_groves,
-	
-	region_long_marsh_verdant_sea,
-	region_long_marsh_foglands,
-	region_long_marsh_bogseep,
-	region_long_marsh_mouths_of_rhyl,
-	
-	region_calidon_eastwoods,
-	region_calidon_red_meadow,
-	region_calidon_shales,
-	
-	region_morodwell_hard_north,
-	region_morodwell_the_bight,
-]
 
-zone = regions[0].r_zone;
-region = 0;
+
+receiver = new Receiver();
+
+receiver.add(SIGNAL.ZONE_CHANGED, function()
+{
+	zone_name = global.regions[global.current_region].r_zone;
+	region_name = global.regions[global.current_region].r_name;
+});
 
 function pause_game()
 {

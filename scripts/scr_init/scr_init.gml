@@ -5,6 +5,23 @@ randomize();
 
 global.enemies = ds_list_create();
 global.paused = false;
+global.state = STATE.COMBAT;
+
+enum SIGNAL
+{
+	PLAYER_ATTACKED,
+	PLAYER_DAMAGED,
+	ENEMY_ATTACKS,
+	ENEMY_DAMAGED,
+	ENEMY_DIED,
+	ZONE_CHANGED
+}
+
+enum STATE
+{
+	COMBAT,
+	INTERMISSION
+}
 
 // example of applying status to a target:
 // apply_status(obj_player, id, STATUS_ID.BLEED, 5);

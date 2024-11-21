@@ -39,6 +39,17 @@ function take_damage(_damage)
 	lerp_speed = 0.3;
 }
 
+function on_death()
+{
+	var _pos = ds_list_find_index(global.enemies, id);
+	ds_list_delete(global.enemies, _pos);
+	ds_list_destroy(statuses);
+	
+	broadcast(SIGNAL.ENEMY_DIED);
+	
+	instance_destroy();
+}
+
 function position_in_list()
 {
 	return ds_list_find_index(global.enemies, id);

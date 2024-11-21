@@ -5,6 +5,7 @@ draw_set_font(fnt_gui_default);
 draw_set_valign(fa_top);
 draw_set_halign(fa_left);
 draw_text(0, 0,
+		name + "\n" +
 		"Health:" + string(health_current) + "\n" +
 		//"Target:" + string(target_index) + "\n" +
 		//"Target Ref:" + string(target) + "\n" +
@@ -16,6 +17,7 @@ if (target != undefined) && variable_instance_exists(target, "health_current") /
 {
 	draw_set_halign(fa_right);
 	draw_text(room_width, 0,
+			string(target.name) + "\n" +
 			"Health:" + string(target.health_current) + "\n" +
 			"Attack Damage:" + string(target.damage_current) + "\n" +
 			"Attack Charge:" + string(target.attack_timer));
