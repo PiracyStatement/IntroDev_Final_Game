@@ -5,7 +5,7 @@ switch (global.state)
 	case STATE.COMBAT:
 		if (ds_list_size(global.enemies) == 0 && enemies_spawned == enemies_kill_goal)
 		{
-			move_to_region();
+			broadcast(SIGNAL.COMBAT_END);
 		}
 		else if (enemy_spawn_timer > 0)
 		{

@@ -48,11 +48,11 @@ region_deepwood_tower_groves =
 	enemy_count : 4,
 	difficulty : 5,
 }
-region_deepwood_the_strands =
+region_deepwood_isuna =
 {
 	r_zone : "Deepwood",
-	r_name : "The Strands",
-	r_description : "Sparser pine forests make up this land. The sea blows cold, fresh air", //Hinterlands?
+	r_name : "Isuna",
+	r_description : "Lowlands marked by tidepools and shallows. Derelicts of an old kingdom dot the landscape; now they are home only to marauders.", //Hinterlands?
 		
 	enemy_count : 5,
 	difficulty : 4,
@@ -159,8 +159,8 @@ global.regions =
 	region_londell_foothill_forests,
 	region_londell_londell_vale,
 	
-	region_deepwood_the_strands,
 	region_deepwood_tower_groves,
+	region_deepwood_isuna,
 	
 	region_long_marsh_verdant_sea,
 	region_long_marsh_foglands,

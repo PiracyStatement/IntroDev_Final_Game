@@ -17,6 +17,10 @@ receiver.add(SIGNAL.ZONE_CHANGED, function()
 	zone_name = global.regions[global.current_region].r_zone;
 	region_name = global.regions[global.current_region].r_name;
 });
+receiver.add(SIGNAL.COMBAT_END, function()
+{
+	global.state = STATE.INTERMISSION;
+});
 
 function pause_game()
 {

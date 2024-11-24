@@ -23,6 +23,10 @@ receiver.add(SIGNAL.ZONE_CHANGED, function()
 	enemies_spawned = 0;
 	enemies_kill_goal = global.regions[global.current_region].enemy_count;
 });
+receiver.add(SIGNAL.COMBAT_START, function()
+{
+	enemy_spawn_timer = room_speed * 1; //make it so that the first enemy spawns in 1 second
+});
 
 
 
@@ -70,6 +74,4 @@ function on_enemy_death()
 	enemies_killed++;
 	sort_enemy_placements();
 }
-
-enemy_spawn_timer = room_speed * 1; //make it so that the first enemy spawns in 1 second
 //reset_spawn_timer();

@@ -37,6 +37,16 @@ target_y = y;
 
 
 
+receiver = new Receiver();
+
+receiver.add(SIGNAL.COMBAT_END, function()
+{
+	attack_timer = 0;
+	momentum = 0;
+});
+
+
+
 function has_status(_status_ID) //_status_ID would be one of the enumerated constants, STATUS_ID.STUN, etc.
 {
 	var _status_types = ds_list_create();
