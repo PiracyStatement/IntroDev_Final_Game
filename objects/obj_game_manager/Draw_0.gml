@@ -87,3 +87,15 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 
 draw_text(window_get_width() / 2, 0, string(zone_name) + "\n" + string(region_name));
+
+
+
+if game_won == false && game_lost == false && popup_text_timer > 0
+{
+	draw_set_font(fnt_gui_default);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_bottom);
+	
+	draw_text(window_get_width() / 2, window_get_height(), popup_text);
+	popup_text_timer--;
+}

@@ -8,6 +8,9 @@ game_lost = false;
 zone_name = global.regions[global.current_region].r_zone;
 region_name = global.regions[global.current_region].r_name;
 
+popup_text = "";
+popup_text_timer = 0;
+
 
 
 receiver = new Receiver();
@@ -59,6 +62,12 @@ receiver.add(SIGNAL.ABILITY_CHOSEN, function()
 });
 
 
+
+function show_popup(_text)
+{
+	popup_text = _text;
+	popup_text_timer = room_speed * 1.5;
+}
 
 function pause_game()
 {

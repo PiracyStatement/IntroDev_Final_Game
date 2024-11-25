@@ -44,6 +44,10 @@ switch (global.state)
 				attack(global.enemies[| target_index]);
 				momentum -= attack_momentum_cost;
 			}
+			else if (momentum < attack_momentum_cost)
+			{
+				obj_game_manager.show_popup("Not enough momentum to attack!");
+			}
 		}
 
 
