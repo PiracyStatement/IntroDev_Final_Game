@@ -21,6 +21,8 @@
     {"id":{"name":"obj_ability_felling_strike","path":"objects/obj_ability_felling_strike/obj_ability_felling_strike.yy",},"order":3,},
     {"id":{"name":"snd_player_attack3","path":"sounds/snd_player_attack3/snd_player_attack3.yy",},"order":6,},
     {"id":{"name":"spr_selected","path":"sprites/spr_selected/spr_selected.yy",},"order":1,},
+    {"id":{"name":"obj_ability_smite","path":"objects/obj_ability_smite/obj_ability_smite.yy",},"order":6,},
+    {"id":{"name":"obj_ability_inspired_strike","path":"objects/obj_ability_inspired_strike/obj_ability_inspired_strike.yy",},"order":5,},
     {"id":{"name":"snd_player_attack2","path":"sounds/snd_player_attack2/snd_player_attack2.yy",},"order":1,},
     {"id":{"name":"obj_ability_selection_arrow","path":"objects/obj_ability_selection_arrow/obj_ability_selection_arrow.yy",},"order":9,},
     {"id":{"name":"spr_card_blank","path":"sprites/spr_card_blank/spr_card_blank.yy",},"order":2,},

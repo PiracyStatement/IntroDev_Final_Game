@@ -34,7 +34,10 @@ receiver.add(SIGNAL.TRANSITION_FINISHED, function()
 		{
 			ability_ref: choose(obj_ability_felling_strike,
 								obj_ability_overwhelm,
-								obj_ability_run_through)
+								obj_ability_run_through,
+								obj_ability_smite,
+								obj_ability_inspired_strike,
+								obj_ability_kick)
 		});
 	}
 	for (var _n = 0; _n < ds_list_size(global.abilities_select); _n++)

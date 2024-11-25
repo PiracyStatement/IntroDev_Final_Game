@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_ability_felling_strike",
+  "name": "obj_ability_inspired_strike",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -30,9 +30,9 @@
   "properties": [],
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"momentum_cost","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"2",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ability_name","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"\"Felling Strike\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ability_name","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"\"Inspired Strike\"",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"is_activatable","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"True",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ability_description","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"\"Deal <\" + string(obj_player.damage_current) + \"> damage + 15% of the target's max HP.\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ability_description","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"\"Deal <\" + string(obj_player.damage_current) + \"> damage multiplied by the current number of enemies.\"",},
   ],
   "parent": {
     "name": "Abilities",

@@ -6,11 +6,11 @@ function cast()
 	{
 		if (momentum >= other.momentum_cost) &&  global.enemies[| 0] != undefined
 		{
-			global.enemies[| 0].take_damage(damage_current * 2);
+			global.enemies[| 0].take_damage(damage_current);
 			
 			if global.enemies[| 1] != undefined
 			{
-				global.enemies[| 1].take_damage(damage_current);
+				global.enemies[| 1].take_damage(damage_current * 2);
 			}
 			
 			momentum -= other.momentum_cost;

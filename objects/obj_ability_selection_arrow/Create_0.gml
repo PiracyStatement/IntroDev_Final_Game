@@ -15,18 +15,23 @@ function next_ability()
 	{
 		if target_index == (ds_list_size(global.abilities_select) - 1)
 		{
+			global.abilities_select[| target_index].hovered = false;
 			target_index = 0;
 		}
 		else
 		{
+			global.abilities_select[| target_index].hovered = false;
 			target_index++;
 		}
+		
+		global.abilities_select[| target_index].hovered = true;
 	}
 }
 
 function select_ability()
 {
 	assign_ability(obj_player, global.abilities_select[| target_index].ability_ref);
+	global.abilities_select[| target_index].hovered = false;
 
 	move_to_region();
 
@@ -34,3 +39,5 @@ function select_ability()
 	global.state = STATE.COMBAT;
 	broadcast(SIGNAL.COMBAT_START);
 }
+
+global.abilities_select[| target_index].hovered = true;

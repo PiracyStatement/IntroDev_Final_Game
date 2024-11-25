@@ -37,6 +37,8 @@ function take_damage(_damage)
 	x = list_pos_x; //reset position if already mid animation to play hit animation in full
 	target_x = list_pos_x + clamp(_damage * 10, 0, 50);
 	lerp_speed = 0.3;
+	
+	return health_current;
 }
 
 function on_death()

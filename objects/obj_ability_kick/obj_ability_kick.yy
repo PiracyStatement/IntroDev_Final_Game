@@ -31,6 +31,8 @@
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ability_name","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"Kick",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"is_activatable","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"True",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"momentum_cost","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"1",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ability_description","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"\"A swift kick that interrupts an enemy's attack. Resets a target's Attack Charge.\"",},
   ],
   "parent": {
     "name": "Abilities",

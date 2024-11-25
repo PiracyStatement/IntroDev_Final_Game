@@ -6,6 +6,8 @@ y = (window_get_height() / 2) + window_get_height(); //there are 2 screens in th
 target_x = x;
 target_y = y;
 
+hovered = false;
+
 ds_list_add(global.abilities_select, self);
 
 temp_abil = instance_create_layer(0, 0, "Abilities", ability_ref);
