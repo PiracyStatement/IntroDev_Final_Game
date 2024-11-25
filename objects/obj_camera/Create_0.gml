@@ -30,5 +30,5 @@ function pan_to_top()
 function pan_to_bottom()
 {
 	target_x = 0;
-	target_y = 768;
+	target_y = window_get_height();
 }

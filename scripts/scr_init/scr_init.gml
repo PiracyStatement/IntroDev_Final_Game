@@ -3,20 +3,24 @@
 // https://www.youtube.com/watch?v=p1zlkXBbTrQ
 randomize();
 
-global.enemies = ds_list_create();
+global.enemies = ds_list_create(); //list containing all spawned enemies
+global.abilities_select = ds_list_create(); //list containing the abilities for the player to choose from
 global.paused = false;
 global.state = STATE.COMBAT;
 
 enum SIGNAL
 {
-	COMBAT_START,
 	COMBAT_END,
+	TRANSITION_FINISHED,
+	ABILITY_CHOSEN,
+	ZONE_CHANGED,
+	COMBAT_START,
+	
 	PLAYER_ATTACKED,
 	PLAYER_DAMAGED,
 	ENEMY_ATTACKS,
 	ENEMY_DAMAGED,
-	ENEMY_DIED,
-	ZONE_CHANGED
+	ENEMY_DIED
 }
 
 enum STATE
@@ -47,7 +51,7 @@ function apply_status(_self_ID, _target_ID, _status_object_name, _duration, _pot
 	}
 }
 
-function assign_ability(_owner, _ability_object_name)
+function assign_ability(_owner, _ability_object_name, _slot = -1)
 {
 	var _abil = instance_create_layer(0, 0, "Abilities", _ability_object_name,
 	{
@@ -58,12 +62,40 @@ function assign_ability(_owner, _ability_object_name)
 	{
 		with owner
 		{
-			if !is_undefined(abilities) && (ds_list_size(abilities) < max_ability_slots)
+			if !is_undefined(abilities)
 			{
-				var _occupied_slots_num = ds_list_size(abilities);
-			
-				switch (_occupied_slots_num)
+				switch (_slot)
 				{
+					case -1: //-1, the default _slot value, will insert the ability in the first empty slot
+						for(var _i = 0; _i < ds_list_size(abilities); _i++)
+						{
+							if abilities[| _i] == noone
+							{
+								ds_list_set(abilities, _i, other.id);
+								
+								switch (_i)
+								{
+									case 0:
+										other.hotkey = ord("Q");
+									break;
+				
+									case 1:
+										other.hotkey = ord("W");
+									break;
+				
+									case 2:
+										other.hotkey = ord("E");
+									break;
+				
+									case 3:
+										other.hotkey = ord("R");
+									break;
+								}
+								break;
+							}
+						}
+					break;
+
 					case 0:
 						other.hotkey = ord("Q");
 					break;
@@ -80,8 +112,8 @@ function assign_ability(_owner, _ability_object_name)
 						other.hotkey = ord("R");
 					break;
 				}
-			
-				ds_list_add(abilities, other.id);
+				
+				if (_slot != -1) {ds_list_set(abilities, _slot, other.id);}
 			}
 			else
 			{

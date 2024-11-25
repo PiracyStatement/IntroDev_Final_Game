@@ -14,6 +14,6 @@ if game_won == true || game_lost == true
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
 	
-	if game_won == true {draw_text(room_width / 2, room_height, "Victory!");}
-	else if game_lost == true {draw_text(room_width / 2, room_height, "Defeat!");}
+	if game_won == true {draw_text(window_get_width() / 2, window_get_height(), "Victory!");}
+	else if game_lost == true {draw_text(window_get_width() / 2, window_get_height(), "Defeat!");}
 }

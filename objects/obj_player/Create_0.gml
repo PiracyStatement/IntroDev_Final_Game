@@ -24,8 +24,15 @@ max_ability_slots = 4;
 statuses = ds_list_create();
 abilities = ds_list_create();
 
+abilities[| 0] = noone;
+abilities[| 1] = noone;
+abilities[| 2] = noone;
+abilities[| 3] = noone;
+
+
+
 default_x = 352;
-default_y = room_height / 2;
+default_y = window_get_height() / 2;
 
 lerp_speed = 0.1;
 
@@ -43,6 +50,7 @@ receiver.add(SIGNAL.COMBAT_END, function()
 {
 	attack_timer = 0;
 	momentum = 0;
+	health_current = health_base;
 });
 
 

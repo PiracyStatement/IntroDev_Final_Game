@@ -65,4 +65,5 @@ function set_list_position(_pos = ds_list_size(global.enemies))
 	{
 		ds_list_insert(global.enemies, _pos, id);
 	}
+	
 }

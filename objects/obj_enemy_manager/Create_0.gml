@@ -1,16 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
-enemy_zone_x1 = room_width * 0.45;
-enemy_zone_x2 = room_width * 0.95;
+enemy_zone_x1 = (window_get_width() - 352) - 320; //352 is the distance the player is from the left edge of the screen
+enemy_zone_x2 = (window_get_width() - 352) + 320;
 enemy_zone_width = enemy_zone_x2 - enemy_zone_x1;
 
-enemy_zone_y = room_height / 2;
+enemy_zone_y = window_get_height() / 2;
 
 enemy_spawn_timer = 0;
 
 enemies_kill_goal = global.regions[global.current_region].enemy_count;
 enemies_spawned = 0;
 enemies_killed = 0;
+
+
 
 receiver = new Receiver();
 
@@ -50,7 +52,7 @@ function sort_enemy_placements()
 
 function spawn_enemy(_enemy, _pos = ds_list_size(global.enemies)) //by default, spawn enemy at the end of the enemy list
 {
-	var _new_enemy = instance_create_layer(room_width + sprite_width, enemy_zone_y, "Enemies", _enemy,
+	var _new_enemy = instance_create_layer(window_get_width() + sprite_width, enemy_zone_y, "Enemies", _enemy, //window_get_width() + sprite_width spawns the enemy just offscreen
 	{
 		//health_base : irandom_range(10, 30)
 	});
@@ -68,10 +70,8 @@ function reset_spawn_timer()
 
 function on_enemy_death()
 {
-	assign_ability(obj_player, choose(obj_ability_overwhelm,
-										obj_ability_felling_strike,
-										obj_ability_run_through));
 	enemies_killed++;
 	sort_enemy_placements();
 }
-//reset_spawn_timer();
+
+enemy_spawn_timer = room_speed * 1; //change when you have a proper menu to start the game?

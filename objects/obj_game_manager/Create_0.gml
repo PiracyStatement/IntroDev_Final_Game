@@ -20,7 +20,42 @@ receiver.add(SIGNAL.ZONE_CHANGED, function()
 receiver.add(SIGNAL.COMBAT_END, function()
 {
 	global.state = STATE.INTERMISSION;
+	
+	if region_name == "Londell Vale"
+	{
+		win();
+	}
 });
+receiver.add(SIGNAL.TRANSITION_FINISHED, function()
+{
+	for (var _i = 0; _i < 3; _i++) //present abilities to choose from
+	{
+		instance_create_layer(0, 0, "Abilities", obj_ability_card,
+		{
+			ability_ref: choose(obj_ability_felling_strike,
+								obj_ability_overwhelm,
+								obj_ability_run_through)
+		});
+	}
+	for (var _n = 0; _n < ds_list_size(global.abilities_select); _n++)
+	{
+		global.abilities_select[| _n].move_onto_screen();
+	}
+	
+	instance_create_layer(window_get_width(), window_get_height() + (window_get_height() / 2) + 128, "Instances", obj_ability_selection_arrow);
+});
+receiver.add(SIGNAL.ABILITY_CHOSEN, function()
+{
+	for (var _i = 0; _i < ds_list_size(global.abilities_select); _i++)
+	{
+		global.abilities_select[| _i].target_x = 0 - global.abilities_select[| _i].sprite_width;
+	}
+	
+	instance_destroy(obj_ability_selection_arrow);
+	ds_list_clear(global.abilities_select);
+});
+
+
 
 function pause_game()
 {

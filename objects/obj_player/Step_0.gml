@@ -23,6 +23,8 @@ switch (global.state)
 		target = global.enemies[| target_index];
 		prev_list_size = ds_list_size(global.enemies);
 
+
+
 		if keyboard_check_pressed (vk_tab)
 		{
 			if target_index < ds_list_size(global.enemies) - 1
@@ -32,6 +34,15 @@ switch (global.state)
 			else if (target_index == ds_list_size(global.enemies) - 1)
 			{
 				target_index = 0;
+			}
+		}
+
+		if keyboard_check_pressed(vk_space)
+		{
+			if (momentum >= attack_momentum_cost) && target != undefined
+			{
+				attack(global.enemies[| target_index]);
+				momentum -= attack_momentum_cost;
 			}
 		}
 
