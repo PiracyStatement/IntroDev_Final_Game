@@ -6,7 +6,7 @@ randomize();
 global.enemies = ds_list_create(); //list containing all spawned enemies
 global.abilities_select = ds_list_create(); //list containing the abilities for the player to choose from
 global.paused = false;
-global.state = STATE.COMBAT;
+global.state = STATE.INTERMISSION;
 
 enum SIGNAL
 {

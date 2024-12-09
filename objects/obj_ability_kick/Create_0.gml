@@ -18,9 +18,21 @@ function cast()
 		//}
 		if (momentum >= other.momentum_cost) && target != undefined
 		{
+			var _enemy_attack_charge = target.attack_timer;
+			
 			target.attack_timer = 0;
 		
 			momentum -= other.momentum_cost;
+			
+			var _momentum_gain_attempts = floor(_enemy_attack_charge / 100);
+			
+			for (var _i = _momentum_gain_attempts; _i > 0; _i--)
+			{
+				if choose(1, 2) == 1
+				{
+					momentum++;
+				}
+			}
 		}
 	}
 }

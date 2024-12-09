@@ -1,10 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-x = 0;
+x = window_get_width();
 y = 0;
 
-target_x = 0;
-target_y = 0;
+target_x = x;
+target_y = y;
 
 
 

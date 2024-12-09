@@ -6,8 +6,10 @@ function cast()
 	{
 		if (momentum >= other.momentum_cost) && target != undefined
 		{
-			target.take_damage(damage_current * ds_list_size(global.enemies));
-		
+			target.take_damage(damage_current * 2)
+			
+			health_current += ds_list_size(global.enemies);
+			
 			momentum -= other.momentum_cost;
 		}
 	}

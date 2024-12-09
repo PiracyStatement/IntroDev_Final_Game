@@ -30,7 +30,7 @@ region_londell_londell_vale =
 	r_name : "Londell Vale",
 	r_description : "A vast and clear land, surrounded by mountains. The Londell Castle, situated on elevated terrain, is seen from anywhere in the vale. The great river Lond cuts through the landscape.",
 		
-	enemy_count : 5,
+	enemy_count : 4,
 	difficulty : 3,
 	
 	r_enemies : [obj_vale_wolf, obj_vale_footpad, obj_mounted_bandit],

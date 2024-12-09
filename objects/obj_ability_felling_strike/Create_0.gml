@@ -6,10 +6,17 @@ function cast()
 	{
 		if (momentum >= other.momentum_cost) && target != undefined
 		{
-			var _percent_damage = 0.15 * (target.health_base);
+			var _enemy_health = target.health_current;
 			
-			target.take_damage(damage_current + _percent_damage);
-		
+			if _enemy_health >= 30
+			{
+				target.take_damage(damage_current * 2);
+			}
+			else
+			{
+				target.take_damage(damage_current);
+			}
+			
 			momentum -= other.momentum_cost;
 		}
 	}

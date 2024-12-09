@@ -10,7 +10,8 @@ attack_timer = 0;
 attack_timer_max = room_speed * attack_speed_current;
 
 damage_mod = 0;
-damage_current = damage_base + damage_mod;
+damage_temp = 0;
+damage_current = damage_base + damage_mod + damage_temp;
 
 momentum = 0;
 max_momentum = 5;
@@ -51,6 +52,7 @@ receiver.add(SIGNAL.COMBAT_END, function()
 	attack_timer = 0;
 	momentum = 0;
 	health_current = health_base;
+	damage_temp = 0;
 });
 
 

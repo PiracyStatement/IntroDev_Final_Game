@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_mounted_bandit",
   "spriteId": {
-    "name": "spr_card_blank",
-    "path": "sprites/spr_card_blank/spr_card_blank.yy",
+    "name": "spr_mounted_bandit",
+    "path": "sprites/spr_mounted_bandit/spr_mounted_bandit.yy",
   },
   "solid": false,
   "visible": true,

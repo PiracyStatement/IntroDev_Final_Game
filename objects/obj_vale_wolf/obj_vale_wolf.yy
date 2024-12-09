@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_vale_wolf",
   "spriteId": {
-    "name": "spr_card_blank",
-    "path": "sprites/spr_card_blank/spr_card_blank.yy",
+    "name": "spr_vale_wolf",
+    "path": "sprites/spr_vale_wolf/spr_vale_wolf.yy",
   },
   "solid": false,
   "visible": true,

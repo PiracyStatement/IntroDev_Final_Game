@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_canyon_wolf",
   "spriteId": {
-    "name": "spr_card_blank",
-    "path": "sprites/spr_card_blank/spr_card_blank.yy",
+    "name": "spr_canyon_wolf",
+    "path": "sprites/spr_canyon_wolf/spr_canyon_wolf.yy",
   },
   "solid": false,
   "visible": true,

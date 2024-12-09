@@ -18,7 +18,7 @@ with (obj_player)
 			//"Target Ref:" + string(target) + "\n" +
 			"Attack Damage:" + string(damage_current) + "\n" +
 			"Momentum:" + string(momentum) + "\n" +
-			"Attack Charge:" + string(attack_timer));
+			"Momentum Charge:" + string(attack_timer));
 
 	if (target != undefined) && variable_instance_exists(target, "health_current") //unexplained occult phenomenon. for some reason, when killing an enemy, the enemy still exists but the game isn't able to do target.health_current, as if only the variable was destroyed
 	{

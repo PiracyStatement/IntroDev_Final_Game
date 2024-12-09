@@ -7,6 +7,8 @@ switch (global.state)
 		{
 			obj_game_manager.lose();
 		}
+		
+		damage_current = damage_base + damage_mod + damage_temp;
 
 		if (ds_list_size(global.enemies) != prev_list_size) //if the list of enemies changed size, do something
 		{

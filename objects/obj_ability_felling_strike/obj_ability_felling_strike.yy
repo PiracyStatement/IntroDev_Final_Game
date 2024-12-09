@@ -29,10 +29,10 @@
   ],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"momentum_cost","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"2",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"momentum_cost","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"1",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ability_name","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"\"Felling Strike\"",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"is_activatable","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"True",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ability_description","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"\"Deal <\" + string(obj_player.damage_current) + \"> damage + 15% of the target's max HP.\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ability_description","path":"objects/obj_ability/obj_ability.yy",},"objectId":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},"value":"\"Deal  double damage if target is above 30 HP.\"",},
   ],
   "parent": {
     "name": "Abilities",
