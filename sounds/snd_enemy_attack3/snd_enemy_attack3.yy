@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_player_damaged",
+  "name": "snd_enemy_attack3",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_player_damaged.mp3",
-  "duration": 1.332219,
+  "soundFile": "snd_enemy_attack3.ogg",
+  "duration": 0.364014,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_player_attack3.mp3",
-  "duration": 0.365714,
+  "soundFile": "snd_player_attack3.ogg",
+  "duration": 0.702653,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

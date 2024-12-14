@@ -32,6 +32,7 @@ function select_ability()
 {
 	assign_ability(obj_player, global.abilities_select[| target_index].ability_ref);
 	global.abilities_select[| target_index].hovered = false;
+	audio_play_sound(snd_ability_selected, 1, false);
 
 	move_to_region();
 

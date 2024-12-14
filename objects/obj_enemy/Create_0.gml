@@ -28,6 +28,9 @@ function attack()
 		target.take_damage(damage_current);
 		target_x = list_pos_x - clamp(damage_current * 20, 0, 50); //list_pos_x is used to remember which x value, based on the enemy's position in the global.enemies list, to return to after animating for an attack/being hit
 		lerp_speed = 0.3;                                           //the clamp() is used to prevent the enemy from moving too far if they deal/are dealt a lot of damage
+	
+		var _attack_sound = choose(snd_enemy_attack1, snd_enemy_attack2, snd_enemy_attack3);
+		audio_play_sound(_attack_sound, 1, false);
 	}
 }
 

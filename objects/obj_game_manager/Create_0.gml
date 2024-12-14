@@ -48,6 +48,7 @@ receiver.add(SIGNAL.TRANSITION_FINISHED, function()
 		global.abilities_select[| _n].move_onto_screen();
 	}
 	
+	audio_play_sound(snd_ability_select, 1, false);
 	instance_create_layer(window_get_width(), window_get_height() + (window_get_height() / 2) + 128, "Instances", obj_ability_selection_arrow);
 });
 receiver.add(SIGNAL.ABILITY_CHOSEN, function()
@@ -87,13 +88,13 @@ function pause_game()
 function win()
 {
 	game_won = true;
-	audio_play_sound(snd_win, 1, false);
+	audio_play_sound(snd_victory, 1, false);
 	pause_game();
 }
 
 function lose()
 {
 	game_lost = true;
-	audio_play_sound(snd_lose, 1, false);
+	audio_play_sound(snd_defeat, 1, false);
 	pause_game();
 }

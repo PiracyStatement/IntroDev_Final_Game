@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_win",
+  "name": "snd_defeat",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_win.mp3",
-  "duration": 1.724063,
+  "soundFile": "snd_defeat.ogg",
+  "duration": 2.814671,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

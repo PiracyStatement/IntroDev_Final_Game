@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_lose",
+  "name": "snd_ability_select",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_lose.mp3",
-  "duration": 1.462844,
+  "soundFile": "snd_ability_select.ogg",
+  "duration": 1.964014,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

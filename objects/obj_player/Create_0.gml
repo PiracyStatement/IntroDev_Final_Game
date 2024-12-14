@@ -88,7 +88,7 @@ function attack(_target)
 		target_x = default_x + clamp(damage_current * 20, 0, 50);
 		lerp_speed = 0.35;
 		
-		var _attack_sound = choose(snd_player_attack2, snd_player_attack3);
+		var _attack_sound = choose(snd_player_attack1, snd_player_attack2, snd_player_attack3);
 		audio_play_sound(_attack_sound, 1, false);
 	}
 }
@@ -99,6 +99,4 @@ function take_damage(_damage)
 	x = default_x; //reset position if already mid animation to play hit animation in full
 	target_x = default_x - clamp(_damage * 10, 0, 50);
 	lerp_speed = 0.3;
-	
-	audio_play_sound(snd_player_damaged, 1, false);
 }
